@@ -101,6 +101,14 @@ EXPOSE  8126
 EXPOSE 8000
 
 
+# -------------------------------- #
+#   Volumes for Data Persistance   #
+# -------------------------------- #
+
+VOLUME /opt/graphite/storage/whisper
+VOLUME /opt/graphite/conf
+VOLUME /opt/grafana
+VOLUME /var/log
 
 # -------- #
 #   Run!   #
