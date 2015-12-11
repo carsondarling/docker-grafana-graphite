@@ -1,15 +1,8 @@
 kamon-grafana-dashboard:
-  image: kamon/grafana_graphite
+  build: .
   restart: always
-  volumes:
-    - ./dashboards:/src/dashboards
-    - ./config.js:/src/statsd/config.js
-    - ./storage-schemas.conf:/opt/graphite/conf/storage-schemas.conf
-    - /opt/graphite/storage/whisper
-    - /opt/graphite/conf
-    - /opt/grafana
-    - /var/log
   ports:
     - 80:80
+    - 8000:8000
     - 8125:8125/udp
     - 8126:8126

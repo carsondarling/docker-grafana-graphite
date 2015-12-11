@@ -89,13 +89,13 @@ ADD     ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # ---------------- #
 
 # Grafana
-EXPOSE  80
+EXPOSE 80
 
 # StatsD UDP port
-EXPOSE  8125/udp
+EXPOSE 8125/udp
 
 # StatsD Management port
-EXPOSE  8126
+EXPOSE 8126
 
 # Graphite web port
 EXPOSE 8000
@@ -108,7 +108,7 @@ EXPOSE 8000
 VOLUME /opt/graphite/storage/whisper
 VOLUME /opt/graphite/conf
 VOLUME /opt/grafana
-VOLUME /var/log
+VOLUME /var/lib/grafana
 
 # -------- #
 #   Run!   #
